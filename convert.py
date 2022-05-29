@@ -1,7 +1,8 @@
 from moviepy.editor import *
 import os
 from pathlib import Path
-from flask import Flask
+from flask import Flask, render_template, redirect, request, url_for, session, jsonify
+# from flask_session import Session
 
 
 
@@ -43,7 +44,7 @@ def conversion_algo():
 
 @app.route("/")
 def index():
-    return "Works"
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run()
