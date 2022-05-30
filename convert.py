@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 from flask import Flask, render_template, redirect, request, url_for, session, jsonify
 # from flask_session import Session
-import pyrebase
+# import pyrebase
 import urllib
 
 from werkzeug.utils import secure_filename
@@ -21,20 +21,20 @@ app.secret_key = "991077a6175a2cf43c4771f569ed0b0b361d7d69"
 
 # For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-config={
-    'apiKey': "AIzaSyANCLEgJCdeGEpMauDaujxl4FKCXUT23Bo",
-    'authDomain': "mp4convertr.firebaseapp.com",
-    'projectId': "mp4convertr",
-    'storageBucket': "mp4convertr.appspot.com",
-    'databaseURL': "https://mp4convertr-default-rtdb.firebaseio.com",
-    'messagingSenderId': "496466736940",
-    'appId': "1:496466736940:web:7980b3f7012fb36c79de89",
-    'measurementId': "G-P8VR69SGTZ"
-  }
-firebase=pyrebase.initialize_app(config)
+# config={
+#     'apiKey': "AIzaSyANCLEgJCdeGEpMauDaujxl4FKCXUT23Bo",
+#     'authDomain': "mp4convertr.firebaseapp.com",
+#     'projectId': "mp4convertr",
+#     'storageBucket': "mp4convertr.appspot.com",
+#     'databaseURL': "https://mp4convertr-default-rtdb.firebaseio.com",
+#     'messagingSenderId': "496466736940",
+#     'appId': "1:496466736940:web:7980b3f7012fb36c79de89",
+#     'measurementId': "G-P8VR69SGTZ"
+#   }
+# firebase=pyrebase.initialize_app(config)
 
-#define storage
-storage=firebase.storage()
+# #define storage
+# storage=firebase.storage()
 
 
 ALLOWED_EXTENSIONS = set(['mp4'])
